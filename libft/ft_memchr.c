@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/29 12:40:13 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/07 21:14:17 by mqian            ###   ########.fr       */
+/*   Created: 2019/02/26 17:49:53 by mqian             #+#    #+#             */
+/*   Updated: 2019/03/07 17:48:00 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char		*dest;
-	char		*src;
-	size_t		len;
+	size_t			len;
+	unsigned char	*temp;
 
-	dest = s1;
-	src = (char *)s2;
+	temp = (unsigned char *)s;
 	len = 0;
-	while (*dest != '\0')
+	while (len < n)
 	{
-		dest++;
-	}
-	while (*src && len < n)
-	{
-		*dest = *src;
-		dest++;
-		src++;
+		if (*temp == (unsigned char)c)
+			return (temp);
+		temp++;
 		len++;
 	}
-	*dest = '\0';
-	return (s1);
+	return (NULL);
 }

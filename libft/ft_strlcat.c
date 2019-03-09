@@ -1,27 +1,35 @@
-#include <string.h>
-#include <stddef.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/10/29 19:54:47 by mqian             #+#    #+#             */
+/*   Updated: 2019/03/07 20:16:43 by mqian            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
+#include "libft.h"
+
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-  char *dt;
-  char *st;
-  size_t max;
-  size_t len;
+	size_t		max;
+	size_t		len;
+	size_t		dstlen;
 
-  dt = dst;
-  st = (char *)src;
-  max = dstsize - ft_strlen(dst) - 1;
-  len = 0;
-  // want to iterate to the /0 of s1 and then start copying from there
-  while (*dt != '\0')
-    dt++;
-  while (*st != '\0' && len < max) // will stop when it reached end of source or reaches max length of copyable string
-  {
-    *dt = *st;
-    dt++;
-    st++;
-    len++
-  }
-  dt = '\0'; //nul terminate the end
-  return (ft_strlen(dst) + len);
+	dstlen = ft_strlen(dst);
+	if (dstsize <= ft_strlen(dst))
+		return (ft_strlen(src) + dstsize);
+	max = dstsize - ft_strlen(dst) - 1;
+	len = 0;
+	while (*dst != '\0')
+		dst++;
+	while (src[len] && len < max)
+	{
+		dst[len] = src[len];
+		len++;
+	}
+	dst[len] = '\0';
+	return (dstlen + ft_strlen(src));
 }

@@ -1,37 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/29 12:40:13 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/07 21:14:17 by mqian            ###   ########.fr       */
+/*   Created: 2019/02/11 13:23:19 by mqian             #+#    #+#             */
+/*   Updated: 2019/02/26 20:04:55 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+int		ft_isalpha(int c)
 {
-	char		*dest;
-	char		*src;
-	size_t		len;
-
-	dest = s1;
-	src = (char *)s2;
-	len = 0;
-	while (*dest != '\0')
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 	{
-		dest++;
+		return (1);
 	}
-	while (*src && len < n)
-	{
-		*dest = *src;
-		dest++;
-		src++;
-		len++;
-	}
-	*dest = '\0';
-	return (s1);
+	return (0);
 }

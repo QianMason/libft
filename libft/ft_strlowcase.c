@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/29 12:40:13 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/07 21:14:17 by mqian            ###   ########.fr       */
+/*   Created: 2018/10/29 12:59:59 by mqian             #+#    #+#             */
+/*   Updated: 2019/02/26 18:43:20 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+char	*ft_strlowcase(char *str)
 {
-	char		*dest;
-	char		*src;
-	size_t		len;
+	char *hold;
 
-	dest = s1;
-	src = (char *)s2;
-	len = 0;
-	while (*dest != '\0')
+	hold = str;
+	while (*str != '\0')
 	{
-		dest++;
+		if (*str >= 65 && *str <= 90)
+		{
+			*str += 32;
+		}
+		str++;
 	}
-	while (*src && len < n)
-	{
-		*dest = *src;
-		dest++;
-		src++;
-		len++;
-	}
-	*dest = '\0';
-	return (s1);
+	str = hold;
+	return (str);
 }

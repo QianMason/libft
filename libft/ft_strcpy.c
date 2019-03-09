@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/29 12:40:13 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/07 21:14:17 by mqian            ###   ########.fr       */
+/*   Created: 2018/10/29 12:39:17 by mqian             #+#    #+#             */
+/*   Updated: 2019/03/05 20:48:54 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	char		*dest;
-	char		*src;
-	size_t		len;
+	int iter;
 
-	dest = s1;
-	src = (char *)s2;
-	len = 0;
-	while (*dest != '\0')
+	iter = 0;
+	while (src[iter] != '\0')
 	{
-		dest++;
+		dst[iter] = src[iter];
+		iter++;
 	}
-	while (*src && len < n)
-	{
-		*dest = *src;
-		dest++;
-		src++;
-		len++;
-	}
-	*dest = '\0';
-	return (s1);
+	dst[iter] = '\0';
+	return (dst);
 }

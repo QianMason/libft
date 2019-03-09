@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/29 12:40:13 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/07 21:14:17 by mqian            ###   ########.fr       */
+/*   Created: 2019/02/26 18:13:50 by mqian             #+#    #+#             */
+/*   Updated: 2019/03/07 21:09:16 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	char		*dest;
-	char		*src;
-	size_t		len;
+	size_t	len;
+	char	*temp;
+	size_t	i;
 
-	dest = s1;
-	src = (char *)s2;
-	len = 0;
-	while (*dest != '\0')
+	i = 0;
+	len = ft_strlen((char *)s);
+	temp = NULL;
+	if ((char)c == '\0')
+		return ((char *)s + len);
+	while (i < len)
 	{
-		dest++;
+		if (s[i] == (char)c)
+			temp = (char *)&s[i];
+		i++;
 	}
-	while (*src && len < n)
-	{
-		*dest = *src;
-		dest++;
-		src++;
-		len++;
-	}
-	*dest = '\0';
-	return (s1);
+	if (temp == NULL)
+		return (NULL);
+	return (temp);
 }

@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/29 12:40:13 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/07 21:14:17 by mqian            ###   ########.fr       */
+/*   Created: 2019/02/11 15:39:05 by mqian             #+#    #+#             */
+/*   Updated: 2019/03/07 18:20:02 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	char		*dest;
-	char		*src;
-	size_t		len;
+	size_t			i;
+	unsigned char	*c;
 
-	dest = s1;
-	src = (char *)s2;
-	len = 0;
-	while (*dest != '\0')
+	i = 0;
+	c = s;
+	if (n == 0)
 	{
-		dest++;
+		return ;
 	}
-	while (*src && len < n)
+	while (i < n)
 	{
-		*dest = *src;
-		dest++;
-		src++;
-		len++;
+		*c = '\0';
+		i++;
+		c++;
 	}
-	*dest = '\0';
-	return (s1);
 }

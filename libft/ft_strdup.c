@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/29 12:40:13 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/07 21:14:17 by mqian            ###   ########.fr       */
+/*   Created: 2018/10/31 11:55:50 by mqian             #+#    #+#             */
+/*   Updated: 2019/03/07 18:35:14 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+char	*ft_strdup(const char *s1)
 {
-	char		*dest;
-	char		*src;
-	size_t		len;
+	int		i;
+	int		len;
+	char	*dest;
 
-	dest = s1;
-	src = (char *)s2;
+	i = 0;
 	len = 0;
-	while (*dest != '\0')
-	{
-		dest++;
-	}
-	while (*src && len < n)
-	{
-		*dest = *src;
-		dest++;
-		src++;
+	while (s1[i++] != '\0')
 		len++;
+	dest = (char*)malloc(sizeof(*dest) * (len + 1));
+	if (!dest)
+		return (NULL);
+	i = 0;
+	while (s1[i] != '\0')
+	{
+		dest[i] = s1[i];
+		i++;
 	}
-	*dest = '\0';
-	return (s1);
+	dest[i] = '\0';
+	return (dest);
 }

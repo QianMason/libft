@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/29 12:40:13 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/07 21:14:17 by mqian            ###   ########.fr       */
+/*   Created: 2019/02/11 16:55:21 by mqian             #+#    #+#             */
+/*   Updated: 2019/03/07 17:31:09 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	char		*dest;
-	char		*src;
-	size_t		len;
+	size_t			len;
+	unsigned char	*s;
+	unsigned char	*d;
 
-	dest = s1;
-	src = (char *)s2;
+	d = dst;
+	s = (unsigned char *)src;
 	len = 0;
-	while (*dest != '\0')
+	while (len < n)
 	{
-		dest++;
-	}
-	while (*src && len < n)
-	{
-		*dest = *src;
-		dest++;
-		src++;
+		*d = *s;
+		if (*s == (unsigned char)c)
+		{
+			d++;
+			return ((void *)d);
+		}
+		d++;
+		s++;
 		len++;
 	}
-	*dest = '\0';
-	return (s1);
+	return (NULL);
 }

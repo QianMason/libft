@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/29 12:40:13 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/07 21:14:17 by mqian            ###   ########.fr       */
+/*   Created: 2018/10/29 12:38:08 by mqian             #+#    #+#             */
+/*   Updated: 2019/03/07 18:18:15 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+int		ft_atoi(const char *str)
 {
-	char		*dest;
-	char		*src;
-	size_t		len;
+	int				sign;
+	int				n;
+	const char		*copy;
 
-	dest = s1;
-	src = (char *)s2;
-	len = 0;
-	while (*dest != '\0')
+	copy = str;
+	sign = 1;
+	n = 0;
+	while (*copy == '\n' || *copy == ' ' || *copy == '\t' ||
+			*copy == '\r' || *copy == '\f' || *copy == '\v')
+		copy++;
+	if (*copy == '-' || *copy == '+')
 	{
-		dest++;
+		if (*copy == '-')
+			sign = -1;
+		copy++;
 	}
-	while (*src && len < n)
+	while ((*copy) >= '0' && *copy <= '9')
 	{
-		*dest = *src;
-		dest++;
-		src++;
-		len++;
+		n = (n * 10) + (*copy - '0');
+		copy++;
 	}
-	*dest = '\0';
-	return (s1);
+	return (n * sign);
 }

@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/29 12:40:13 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/07 21:14:17 by mqian            ###   ########.fr       */
+/*   Created: 2018/10/29 12:34:10 by mqian             #+#    #+#             */
+/*   Updated: 2019/03/07 18:08:11 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+void	ft_putnbr(int n)
 {
-	char		*dest;
-	char		*src;
-	size_t		len;
+	unsigned int num;
 
-	dest = s1;
-	src = (char *)s2;
-	len = 0;
-	while (*dest != '\0')
+	if (n < 0)
 	{
-		dest++;
+		ft_putchar('-');
+		n = -n;
 	}
-	while (*src && len < n)
+	num = n;
+	if (num > 9)
 	{
-		*dest = *src;
-		dest++;
-		src++;
-		len++;
+		ft_putnbr(num / 10);
+		ft_putnbr(num % 10);
 	}
-	*dest = '\0';
-	return (s1);
+	if (num <= 9)
+		ft_putchar((num % 10) + 48);
 }
