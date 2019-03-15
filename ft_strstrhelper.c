@@ -6,7 +6,7 @@
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/05 19:11:25 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/12 18:29:57 by mqian            ###   ########.fr       */
+/*   Updated: 2019/03/14 18:49:43 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,3 @@ int		ft_strstrhelper(const char *haystack, const char *needle)
 	}
 	return (1);
 }
-
-/*
-** helper that is basically like strcmp
-*/

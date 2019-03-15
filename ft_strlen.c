@@ -6,7 +6,7 @@
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 14:42:07 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/12 18:07:11 by mqian            ###   ########.fr       */
+/*   Updated: 2019/03/14 18:48:56 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,3 @@ size_t		ft_strlen(const char *s)
 		count++;
 	return (count);
 }
-
-/*
-** self explanatory
-*/

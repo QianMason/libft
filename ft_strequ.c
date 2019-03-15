@@ -6,7 +6,7 @@
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/08 18:24:19 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/12 17:59:08 by mqian            ###   ########.fr       */
+/*   Updated: 2019/03/14 18:48:35 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,3 @@ int		ft_strequ(char const *s1, char const *s2)
 	}
 	return (1);
 }
-
-/*
-** checks for null of both parameters
-** if their lengths aren't equal, you can automatically rule them out too
-** while both pointers are not null, if they are different at any time, return 0
-** increment pointers
-** if it exits with a 1, both are equal
-*/

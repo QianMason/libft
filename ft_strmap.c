@@ -6,7 +6,7 @@
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/08 17:38:14 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/12 18:08:17 by mqian            ###   ########.fr       */
+/*   Updated: 2019/03/14 18:48:59 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,3 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	}
 	return (new);
 }
-
-/*
-** null check of params
-** get len of string
-** allocate new string;
-** allocation check for new string
-** while i < len, copy applied function on source string char to new string and increment
-** return the new string
-*/

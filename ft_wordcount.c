@@ -6,7 +6,7 @@
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/11 19:17:15 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/11 19:17:16 by mqian            ###   ########.fr       */
+/*   Updated: 2019/03/14 18:50:08 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,3 @@ int		ft_wordcount(char *s, char c)
 	}
 	return (count);
 }
-
-/*
-** accepts a string and a char to search for
-** and returns the number of words in the string
-*/

@@ -6,7 +6,7 @@
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/08 17:32:28 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/12 18:00:44 by mqian            ###   ########.fr       */
+/*   Updated: 2019/03/14 18:48:44 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
-
-/*
-** same thing as striter except that it also passes the index
-*/

@@ -6,7 +6,7 @@
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 17:27:53 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/12 17:20:45 by mqian            ###   ########.fr       */
+/*   Updated: 2019/03/14 18:47:06 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,3 @@ void	*ft_memalloc(size_t size)
 	ft_bzero(alloc, size);
 	return (alloc);
 }
-
-/*
-** allocates a block of memory and zeroes all the blocks
-** if allocation fails, it returns null
-*/

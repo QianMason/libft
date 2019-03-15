@@ -6,7 +6,7 @@
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/08 18:08:26 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/12 18:08:30 by mqian            ###   ########.fr       */
+/*   Updated: 2019/03/14 18:49:03 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	return (new);
 }
-
-/*
-** same as strmap except with passing the index
-*/

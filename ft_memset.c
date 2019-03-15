@@ -6,7 +6,7 @@
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 15:15:51 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/12 17:37:43 by mqian            ###   ########.fr       */
+/*   Updated: 2019/03/14 18:47:30 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-
-/*
-** set memory to whatever it is you pass
-** while i < len bytes set the value, increment pointer and i.
-*/

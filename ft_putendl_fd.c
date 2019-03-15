@@ -6,7 +6,7 @@
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/11 19:21:14 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/12 17:38:54 by mqian            ###   ########.fr       */
+/*   Updated: 2019/03/14 18:47:46 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,3 @@ void	ft_putendl_fd(char const *s, int fd)
 	}
 	ft_putchar_fd('\n', fd);
 }
-
-/*
-** putstr fd probably could've been used here oh well
-*/

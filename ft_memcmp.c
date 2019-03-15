@@ -6,7 +6,7 @@
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/26 17:50:52 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/12 17:27:36 by mqian            ###   ########.fr       */
+/*   Updated: 2019/03/14 18:47:17 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,3 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-/*
-** like strcmp, but for blocks of memory
-** two char * temp pointers on the two strings
-** while i < n bytes, it will compare both blocks the two pointers are pointing at
-** if they are different, return the difference between the two
-** if it reaches the end and they are not different, simply returns 0
-*/

@@ -6,7 +6,7 @@
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/11 19:24:12 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/12 17:38:12 by mqian            ###   ########.fr       */
+/*   Updated: 2019/03/14 18:47:33 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,3 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-
-/*
-** write to file descriptor ez shit
-*/

@@ -6,7 +6,7 @@
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/11 19:11:59 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/11 19:12:49 by mqian            ###   ########.fr       */
+/*   Updated: 2019/03/14 18:49:53 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,3 @@ int		ft_strtrimbackhelper(char *s)
 	}
 	return (i);
 }
-
-/*
-** ft_trimbackhelper
-** helper function that coutns whitespaces
-** from back of function
-** iterate to end, go back one, then start counting.
-*/

@@ -6,7 +6,7 @@
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/08 19:03:47 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/12 18:13:40 by mqian            ###   ########.fr       */
+/*   Updated: 2019/03/14 18:49:17 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,3 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n)
 	}
 	return (1);
 }
-
-/*
-** same as strequ except up to n bytes
-*/

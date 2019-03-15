@@ -6,7 +6,7 @@
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/11 19:20:00 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/12 17:16:48 by mqian            ###   ########.fr       */
+/*   Updated: 2019/03/14 18:46:56 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,19 +34,3 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	new->next = NULL;
 	return (new);
 }
-
-/*
-** Allocates (with malloc(3)) and returns a “fresh” link. The
-** variables content and content_size of the new link
-** are initialized by copy of the parameters of the function.
-** If the parameter content is nul, the variable content is initialized to
-** NULL and the variable content_size is initialized to 0 even
-** if the parameter content_size isn’t. The variable next is
-** initialized to NULL. If the allocation fails, the function returns
-** NULL.
-** allocates mem for new list elem. returns null if alloc fails
-** per docs if content passed is null, sets new elems content pointer to null and content size to 0
-** else, it allocates memory for the content and points content pointer to it
-** copies the memory to the allocated space and sets content size of new elem to reference elem content size
-** sets the next pointer of new elem to NULL and returns it
-*/

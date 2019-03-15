@@ -6,7 +6,7 @@
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/11 19:27:33 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/12 16:44:06 by mqian            ###   ########.fr       */
+/*   Updated: 2019/03/14 18:46:15 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ size_t))
 ** have a pointer be the curr that deletes
 ** original alst tracks the temp and gets freed
 ** while (temp), del function is used on list element, temp moves over,
-** free (*alst) frees memory of the element that del function was just used on, then alst moved up to temp
+** free (*alst) frees memory of the element that del function was just used
+** on, then alst moved up to temp
 ** repeat until temp reaches null
 ** free last element pointed to by alst then point it to null
 */

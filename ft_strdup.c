@@ -6,7 +6,7 @@
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/31 11:55:50 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/12 17:57:53 by mqian            ###   ########.fr       */
+/*   Updated: 2019/03/14 18:48:30 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,3 @@ char	*ft_strdup(const char *s1)
 	dest[i] = '\0';
 	return (dest);
 }
-
-/*
-** like strcpy, except that it allocates the buffer for the string
-** could've used ft_Strlen to save a line but whatever
-** allocate dest and check for failed allocation
-** while loop to copy
-** cap the end
-*/

@@ -6,7 +6,7 @@
 /*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 16:05:11 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/12 17:32:38 by mqian            ###   ########.fr       */
+/*   Updated: 2019/03/14 18:47:20 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
-/*
-** same as memccpy except that it doesnt stop after finding a character, it stops after n bytes
-*/
