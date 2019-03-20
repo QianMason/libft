@@ -3,61 +3,56 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mqian <mqian@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jrameau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/11 19:13:05 by mqian             #+#    #+#             */
-/*   Updated: 2019/03/14 18:49:36 by mqian            ###   ########.fr       */
+/*   Created: 2016/09/27 13:18:35 by jrameau           #+#    #+#             */
+/*   Updated: 2019/03/19 20:39:31 by mqian            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-static	int	ft_nextindex(char *s, char c, int idx)
+static int		get_word_len(char const *str, char c)
 {
-	while (s[idx] && s[idx] == c)
-		idx++;
-	return (idx);
-}
-
-static	int	ft_getlen(char *s, char c, int idx)
-{
+	int	i;
 	int	len;
 
+	i = 0;
 	len = 0;
-	while (s[idx])
+	while (str[i] == c)
+		i++;
+	while (str[i] != c && str[i] != '\0')
 	{
-		if (s[idx] != c)
-			len++;
-		idx++;
+		i++;
+		len++;
 	}
 	return (len);
 }
 
-char		**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
-	char	**new;
-	int		idx;
-	int		wordcount;
 	int		i;
 	int		j;
+	int		k;
+	char	**str2;
 
-	if (!s)
+	if (!s || !(str2 = (char **)malloc(sizeof(*str2) *
+		(ft_countwords(s, c) + 1))))
 		return (NULL);
-	wordcount = ft_wordcount((char *)s, c);
-	i = 0;
-	idx = 0;
-	if (!(new = (char **)malloc(sizeof(s) * (wordcount + 1))))
-		return (NULL);
-	while (i < wordcount)
+	i = -1;
+	j = 0;
+	while (++i < ft_countwords(s, c))
 	{
-		j = 0;
-		idx = ft_nextindex((char *)s, c, idx);
-		if (!(new[i] = ft_strnew(sizeof(char) * ft_getlen((char *)s, c, idx))))
-			return (NULL);
-		while (s[idx] != c)
-			new[i][j++] = s[idx++];
-		i++;
+		k = 0;
+		if (!(str2[i] = ft_strnew(get_word_len(&s[j], c) + 1)))
+			str2[i] = NULL;
+		while (s[j] == c)
+			j++;
+		while (s[j] != c && s[j])
+			str2[i][k++] = s[j++];
+		str2[i][k] = '\0';
 	}
-	new[i] = 0;
-	return (new);
+	str2[i] = 0;
+	return (str2);
 }
+
